@@ -64,6 +64,3 @@ No borrar el PVC durante esa demostración. Compose y Kubernetes tienen volúmen
 ```json
 {"clientId":1,"items":[{"productId":1,"quantity":2}]}
 ```
-
-
-Comandos listos para copiar en [DEFENSA.md](DEFENSA.md).
