@@ -65,14 +65,5 @@ No borrar el PVC durante esa demostración. Compose y Kubernetes tienen volúmen
 {"clientId":1,"items":[{"productId":1,"quantity":2}]}
 ```
 
-# Defensa rápida — 15 minutos
-
-- **0–2 min:** dibujar Navegador → Nginx → React/NestJS → PostgreSQL → volumen o PVC.
-- **2–5 min:** abrir Inicio, Productos, Clientes y Pedidos; registrar un pedido y ver el detalle.
-- **5–7 min:** `docker compose ps`, `docker network ls`, `docker volume ls`; explicar 4 contenedores, 2 redes y 1 volumen.
-- **7–10 min:** `kubectl get pods`, `kubectl get deployments`, `kubectl get services`, `kubectl get pvc`.
-- **10–12 min:** `kubectl scale deployment backend --replicas=3`; mostrar 3 Pods y hostname en `/api/health`.
-- **12–13 min:** borrar un Pod backend y mostrar su reemplazo.
-- **13–15 min:** borrar el Pod PostgreSQL, comprobar el mismo pedido y explicar el recorrido de una petición.
 
 Comandos listos para copiar en [DEFENSA.md](DEFENSA.md).
