@@ -1,0 +1,67 @@
+services:
+  proxy:
+    image: nginx:alpine
+    container_name: lomax-proxy
+    ports:
+      - "${LOMAX_PORT:-80}:80"
+    volumes:
+      - ./proxy/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - frontend
+      - backend
+    networks:
+      - frontend-network
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: lomax-frontend:local
+    container_name: lomax-frontend
+    networks:
+      - frontend-network
+    restart: unless-stopped
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: lomax-backend:local
+    container_name: lomax-backend
+    environment:
+      - DATABASE_URL=postgresql://${POSTGRES_USER:-lomax}:${POSTGRES_PASSWORD:-lomax123}@postgres:5432/${POSTGRES_DB:-lomax}?schema=public
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - frontend-network
+      - backend-network
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: lomax-postgres
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB:-lomax}
+      - POSTGRES_USER=${POSTGRES_USER:-lomax}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-lomax123}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - backend-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-lomax}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+
+networks:
+  frontend-network:
+    driver: bridge
+  backend-network:
+    driver: bridge

@@ -1,0 +1,49 @@
+{
+  "id": 1,
+  "clientId": 1,
+  "status": "COMPLETADO",
+  "total": "459.97",
+  "createdAt": "2026-09-29T23:02:21.076Z",
+  "client": {
+    "id": 1,
+    "name": "Comercial La Paz",
+    "nit": "1001001",
+    "email": "ventas@comerciallapaz.com",
+    "phone": "2-2200001",
+    "createdAt": "2026-09-29T23:02:20.992Z"
+  },
+  "details": [
+    {
+      "id": 1,
+      "orderId": 1,
+      "productId": 1,
+      "quantity": 2,
+      "unitPrice": "189.99",
+      "subtotal": "379.98",
+      "product": {
+        "id": 1,
+        "name": "Monitor Samsung 24\"",
+        "description": "Monitor LED Full HD 24 pulgadas",
+        "price": "189.99",
+        "stock": 50,
+        "createdAt": "2026-09-29T23:02:21.037Z"
+      }
+    },
+    {
+      "id": 2,
+      "orderId": 1,
+      "productId": 3,
+      "quantity": 1,
+      "unitPrice": "79.99",
+      "subtotal": "79.99",
+      "product": {
+        "id": 3,
+        "name": "Mouse Logitech MX Master",
+        "description": "Mouse ergonómico inalámbrico",
+        "price": "79.99",
+        "stock": 75,
+        "createdAt": "2026-09-29T23:02:21.037Z"
+      }
+    }
+  ]
+}

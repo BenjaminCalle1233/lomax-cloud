@@ -1,0 +1,2 @@
+lomax-evidencia_frontend-network: lomax-proxy lomax-frontend lomax-backend 
+lomax-evidencia_backend-network: lomax-backend lomax-postgres 

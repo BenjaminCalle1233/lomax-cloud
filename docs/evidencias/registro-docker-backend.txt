@@ -1,0 +1,60 @@
+lomax-backend  | warn The configuration property `package.json#prisma` is deprecated and will be removed in Prisma 7. Please migrate to a Prisma config file (e.g., `prisma.config.ts`).
+lomax-backend  | For more information, see: https://pris.ly/prisma-config
+lomax-backend  | 
+lomax-backend  | Prisma schema loaded from prisma/schema.prisma
+lomax-backend  | Datasource "db": PostgreSQL database "lomax", schema "public" at "postgres:5432"
+lomax-backend  | 
+lomax-backend  | 1 migration found in prisma/migrations
+lomax-backend  | 
+lomax-backend  | Applying migration `20240101000000_init`
+lomax-backend  | 
+lomax-backend  | The following migration(s) have been applied:
+lomax-backend  | 
+lomax-backend  | migrations/
+lomax-backend  |   └─ 20240101000000_init/
+lomax-backend  |     └─ migration.sql
+lomax-backend  |       
+lomax-backend  | All migrations have been successfully applied.
+lomax-backend  | npm notice
+lomax-backend  | npm notice New major version of npm available! 10.8.2 -> 12.1.0
+lomax-backend  | npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.1.0
+lomax-backend  | npm notice To update run: npm install -g npm@12.1.0
+lomax-backend  | npm notice
+lomax-backend  | warn The configuration property `package.json#prisma` is deprecated and will be removed in Prisma 7. Please migrate to a Prisma config file (e.g., `prisma.config.ts`).
+lomax-backend  | For more information, see: https://pris.ly/prisma-config
+lomax-backend  | 
+lomax-backend  | Running seed command `tsx prisma/seed.ts` ...
+lomax-backend  | Seed completed: 10 clients, 20 products, 20 orders
+lomax-backend  | ┌─────────────────────────────────────────────────────────┐
+lomax-backend  | │  Update available 6.19.3 -> 8.0.0-rc.19                 │
+lomax-backend  | │                                                         │
+lomax-backend  | │  This is a major update - please follow the guide at    │
+lomax-backend  | │  https://pris.ly/d/major-version-upgrade                │
+lomax-backend  | │                                                         │
+lomax-backend  | │  Run the following to update                            │
+lomax-backend  | │    npm i --save-dev prisma@latest                       │
+lomax-backend  | │    npm i @prisma/client@latest                          │
+lomax-backend  | └─────────────────────────────────────────────────────────┘
+lomax-backend  | 
+lomax-backend  | 🌱  The seed command has been executed.
+lomax-backend  | [32m[Nest] 1  - [39m09/29/2026, 11:02:22 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+lomax-backend  | [32m[Nest] 1  - [39m09/29/2026, 11:02:22 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +16ms[39m
+lomax-backend  | [32m[Nest] 1  - [39m09/29/2026, 11:02:22 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +0ms[39m
+lomax-backend  | [32m[Nest] 1  - [39m09/29/2026, 11:02:22 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mHealthModule dependencies initialized[39m[38;5;3m +0ms[39m
+lomax-backend  | [32m[Nest] 1  - [39m09/29/2026, 11:02:22 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mProductsModule dependencies initialized[39m[38;5;3m +1ms[39m
+lomax-backend  | [32m[Nest] 1  - [39m09/29/2026, 11:02:22 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mClientsModule dependencies initialized[39m[38;5;3m +0ms[39m
+lomax-backend  | [32m[Nest] 1  - [39m09/29/2026, 11:02:22 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mOrdersModule dependencies initialized[39m[38;5;3m +0ms[39m
+lomax-backend  | [32m[Nest] 1  - [39m09/29/2026, 11:02:22 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mHealthController {/api/health}:[39m[38;5;3m +5ms[39m
+lomax-backend  | [32m[Nest] 1  - [39m09/29/2026, 11:02:22 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/health, GET} route[39m[38;5;3m +3ms[39m
+lomax-backend  | [32m[Nest] 1  - [39m09/29/2026, 11:02:22 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mProductsController {/api/products}:[39m[38;5;3m +1ms[39m
+lomax-backend  | [32m[Nest] 1  - [39m09/29/2026, 11:02:22 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/products, GET} route[39m[38;5;3m +1ms[39m
+lomax-backend  | [32m[Nest] 1  - [39m09/29/2026, 11:02:22 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/products/:id, GET} route[39m[38;5;3m +1ms[39m
+lomax-backend  | [32m[Nest] 1  - [39m09/29/2026, 11:02:22 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mClientsController {/api/clients}:[39m[38;5;3m +1ms[39m
+lomax-backend  | [32m[Nest] 1  - [39m09/29/2026, 11:02:22 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/clients, GET} route[39m[38;5;3m +1ms[39m
+lomax-backend  | [32m[Nest] 1  - [39m09/29/2026, 11:02:22 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/clients/:id, GET} route[39m[38;5;3m +0ms[39m
+lomax-backend  | [32m[Nest] 1  - [39m09/29/2026, 11:02:22 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mOrdersController {/api/orders}:[39m[38;5;3m +0ms[39m
+lomax-backend  | [32m[Nest] 1  - [39m09/29/2026, 11:02:22 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/orders, GET} route[39m[38;5;3m +1ms[39m
+lomax-backend  | [32m[Nest] 1  - [39m09/29/2026, 11:02:22 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/orders/:id, GET} route[39m[38;5;3m +0ms[39m
+lomax-backend  | [32m[Nest] 1  - [39m09/29/2026, 11:02:22 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/orders, POST} route[39m[38;5;3m +0ms[39m
+lomax-backend  | [32m[Nest] 1  - [39m09/29/2026, 11:02:22 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +100ms[39m
+lomax-backend  | Backend running on port 3000

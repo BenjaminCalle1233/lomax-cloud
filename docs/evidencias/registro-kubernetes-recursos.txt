@@ -1,0 +1,15 @@
+NAME                       READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/backend    3/3     3            3           88m
+deployment.apps/frontend   1/1     1            1           88m
+deployment.apps/postgres   1/1     1            1           88m
+deployment.apps/proxy      1/1     1            1           88m
+
+NAME                 TYPE           CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
+service/backend      ClusterIP      10.96.23.101   <none>        3000/TCP       88m
+service/frontend     ClusterIP      10.96.74.234   <none>        80/TCP         88m
+service/kubernetes   ClusterIP      10.96.0.1      <none>        443/TCP        3h11m
+service/postgres     ClusterIP      10.96.42.29    <none>        5432/TCP       88m
+service/proxy        LoadBalancer   10.96.89.163   172.18.0.5    80:31021/TCP   88m
+
+NAME                                 STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE
+persistentvolumeclaim/postgres-pvc   Bound    pvc-a96e1a87-70a0-4cd4-b2a8-699f953672d1   1Gi        RWO            standard       <unset>                 88m

@@ -1,0 +1,5 @@
+kubectl delete pod backend-cc48b58f6-bq494
+pod "backend-cc48b58f6-bq494" deleted from default namespace
+pod/backend-cc48b58f6-9lpdl condition met
+pod/backend-cc48b58f6-cbcj6 condition met
+pod/backend-cc48b58f6-rs2zs condition met

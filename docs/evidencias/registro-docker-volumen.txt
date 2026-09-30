@@ -1,0 +1,1 @@
+Volumen: lomax-evidencia_postgres_data | Driver: local | Punto de montaje: /var/lib/docker/volumes/lomax-evidencia_postgres_data/_data

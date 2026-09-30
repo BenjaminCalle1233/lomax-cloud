@@ -1,0 +1,5 @@
+NAME             IMAGE                  COMMAND                  SERVICE    CREATED              STATUS                    PORTS
+lomax-backend    lomax-backend:local    "docker-entrypoint.s…"   backend    About a minute ago   Up 43 seconds             3000/tcp
+lomax-frontend   lomax-frontend:local   "/docker-entrypoint.…"   frontend   About a minute ago   Up 58 seconds             80/tcp
+lomax-postgres   postgres:16-alpine     "docker-entrypoint.s…"   postgres   About a minute ago   Up 59 seconds (healthy)   5432/tcp
+lomax-proxy      nginx:alpine           "/docker-entrypoint.…"   proxy      About a minute ago   Up 42 seconds             0.0.0.0:8081->80/tcp, [::]:8081->80/tcp

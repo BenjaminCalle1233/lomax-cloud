@@ -1,0 +1,4 @@
+NAME                      READY   STATUS        RESTARTS      AGE
+backend-cc48b58f6-mmvzv   1/1     Terminating   0             53m
+backend-cc48b58f6-pkdrj   1/1     Terminating   0             54m
+backend-cc48b58f6-rs2zs   1/1     Running       2 (85m ago)   85m

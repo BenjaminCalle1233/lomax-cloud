@@ -1,0 +1,4 @@
+NAME                      READY   STATUS    RESTARTS      AGE
+backend-cc48b58f6-9lpdl   1/1     Running   0             32s
+backend-cc48b58f6-cbcj6   1/1     Running   0             79s
+backend-cc48b58f6-rs2zs   1/1     Running   2 (86m ago)   87m

@@ -1,0 +1,8 @@
+kubectl delete pod postgres-6b5b49747f-pvf5m
+pod "postgres-6b5b49747f-pvf5m" deleted from default namespace
+pod/postgres-6b5b49747f-d9rvb condition met
+NAME                        READY   STATUS    RESTARTS   AGE
+postgres-6b5b49747f-d9rvb   1/1     Running   0          7s
+NAME           STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE
+postgres-pvc   Bound    pvc-a96e1a87-70a0-4cd4-b2a8-699f953672d1   1Gi        RWO            standard       <unset>                 88m
+Reintento HTTP: 200; pedido 21 recuperado. La primera consulta inmediatamente después de Ready devolvió HTTP 500.

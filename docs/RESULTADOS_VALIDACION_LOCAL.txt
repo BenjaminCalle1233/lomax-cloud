@@ -1,0 +1,134 @@
+Validación local del 29 de septiembre de 2026. Kubernetes Docker Desktop. No constituye despliegue AWS.
+deployment.apps/backend scaled
+deployment "backend" successfully rolled out
+NAME      READY   UP-TO-DATE   AVAILABLE   AGE
+backend   1/1     1            1           118s
+deployment.apps/backend scaled
+Waiting for deployment "backend" rollout to finish: 1 of 3 updated replicas are available...
+Waiting for deployment "backend" rollout to finish: 2 of 3 updated replicas are available...
+deployment "backend" successfully rolled out
+NAME                       READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/backend    3/3     3            3           2m20s
+deployment.apps/frontend   1/1     1            1           2m20s
+deployment.apps/postgres   1/1     1            1           2m20s
+deployment.apps/proxy      1/1     1            1           2m20s
+
+NAME                            READY   STATUS        RESTARTS      AGE
+pod/backend-cc48b58f6-4ztxd     1/1     Running       0             22s
+pod/backend-cc48b58f6-7vzr2     1/1     Running       0             22s
+pod/backend-cc48b58f6-f2qc4     1/1     Terminating   2 (91s ago)   105s
+pod/backend-cc48b58f6-k8hl4     1/1     Terminating   2 (91s ago)   2m20s
+pod/backend-cc48b58f6-rs2zs     1/1     Running       2 (91s ago)   106s
+pod/frontend-5b6ccd5796-ftp6c   1/1     Running       0             2m20s
+pod/postgres-6b5b49747f-h4mnt   1/1     Running       0             2m20s
+pod/proxy-7bdcb6467-w8skf       1/1     Running       0             2m20s
+
+NAME                 TYPE           CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
+service/backend      ClusterIP      10.96.23.101   <none>        3000/TCP       2m20s
+service/frontend     ClusterIP      10.96.74.234   <none>        80/TCP         2m20s
+service/kubernetes   ClusterIP      10.96.0.1      <none>        443/TCP        105m
+service/postgres     ClusterIP      10.96.42.29    <none>        5432/TCP       2m20s
+service/proxy        LoadBalancer   10.96.89.163   172.18.0.5    80:31021/TCP   2m20s
+
+NAME                                 STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE
+persistentvolumeclaim/postgres-pvc   Bound    pvc-a96e1a87-70a0-4cd4-b2a8-699f953672d1   1Gi        RWO            standard       <unset>                 2m20s
+backend-cc48b58f6-7vzr2
+backend-cc48b58f6-rs2zs
+Seed Kubernetes: clientes=10, productos=20, pedidos=20
+{
+  "id": 21,
+  "clientId": 1,
+  "status": "PENDIENTE",
+  "total": "379.98",
+  "createdAt": "2026-09-29T21:44:27.242Z",
+  "client": {
+    "id": 1,
+    "name": "Comercial La Paz",
+    "nit": "1001001",
+    "email": "ventas@comerciallapaz.com",
+    "phone": "2-2200001",
+    "createdAt": "2026-09-29T21:42:33.914Z"
+  },
+  "details": [
+    {
+      "id": 44,
+      "orderId": 21,
+      "productId": 1,
+      "quantity": 2,
+      "unitPrice": "189.99",
+      "subtotal": "379.98",
+      "product": {
+        "id": 1,
+        "name": "Monitor Samsung 24\"",
+        "description": "Monitor LED Full HD 24 pulgadas",
+        "price": "189.99",
+        "stock": 50,
+        "createdAt": "2026-09-29T21:42:33.931Z"
+      }
+    }
+  ]
+}
+Autorrecuperación: Pod previo backend-cc48b58f6-4ztxd
+pod "backend-cc48b58f6-4ztxd" deleted from default namespace
+deployment "backend" successfully rolled out
+NAME                      READY   STATUS    RESTARTS        AGE
+backend-cc48b58f6-4s4qq   1/1     Running   0               32s
+backend-cc48b58f6-7vzr2   1/1     Running   0               94s
+backend-cc48b58f6-rs2zs   1/1     Running   2 (2m43s ago)   2m58s
+pod "postgres-6b5b49747f-h4mnt" deleted from default namespace
+Waiting for deployment "postgres" rollout to finish: 0 of 1 updated replicas are available...
+deployment "postgres" successfully rolled out
+Persistencia después de recrear el Pod PostgreSQL
+{
+  "id": 21,
+  "clientId": 1,
+  "status": "PENDIENTE",
+  "total": "379.98",
+  "createdAt": "2026-09-29T21:44:27.242Z",
+  "client": {
+    "id": 1,
+    "name": "Comercial La Paz",
+    "nit": "1001001",
+    "email": "ventas@comerciallapaz.com",
+    "phone": "2-2200001",
+    "createdAt": "2026-09-29T21:42:33.914Z"
+  },
+  "details": [
+    {
+      "id": 44,
+      "orderId": 21,
+      "productId": 1,
+      "quantity": 2,
+      "unitPrice": "189.99",
+      "subtotal": "379.98",
+      "product": {
+        "id": 1,
+        "name": "Monitor Samsung 24\"",
+        "description": "Monitor LED Full HD 24 pulgadas",
+        "price": "189.99",
+        "stock": 50,
+        "createdAt": "2026-09-29T21:42:33.931Z"
+      }
+    }
+  ]
+}
+NAME                       READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/backend    3/3     3            3           4m21s
+deployment.apps/frontend   1/1     1            1           4m21s
+deployment.apps/postgres   1/1     1            1           4m21s
+deployment.apps/proxy      1/1     1            1           4m21s
+
+NAME                            READY   STATUS    RESTARTS        AGE
+pod/backend-cc48b58f6-4s4qq     1/1     Running   0               81s
+pod/backend-cc48b58f6-7vzr2     1/1     Running   0               2m23s
+pod/backend-cc48b58f6-rs2zs     1/1     Running   2 (3m32s ago)   3m47s
+pod/frontend-5b6ccd5796-ftp6c   1/1     Running   0               4m21s
+pod/postgres-6b5b49747f-7xvhr   1/1     Running   0               49s
+pod/proxy-7bdcb6467-w8skf       1/1     Running   0               4m21s
+
+NAME                                 STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE
+persistentvolumeclaim/postgres-pvc   Bound    pvc-a96e1a87-70a0-4cd4-b2a8-699f953672d1   1Gi        RWO            standard       <unset>                 4m21s
+NAME            ADDRESSTYPE   PORTS   ENDPOINTS                             AGE
+backend-8qztw   IPv4          3000    10.244.0.11,10.244.0.12,10.244.0.14   4m22s
+Resumen Docker comprobado antes de Kubernetes: cuatro contenedores; dos redes; volumen postgres_data; seed 10 clientes, 20 productos, 20 pedidos; pedido 21 creado con cantidad 2, precio 189.99 y total 379.98; mismo pedido consultado después de recrear postgres. Frontend y backend compilados correctamente.
+Estado final: Kubernetes activo en http://localhost con backend 3/3. Compose detenido; su volumen conservado. No se publicaron imágenes ni se configuró AWS.
